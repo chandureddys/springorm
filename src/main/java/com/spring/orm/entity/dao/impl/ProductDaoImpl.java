@@ -1,5 +1,7 @@
 package com.spring.orm.entity.dao.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.orm.hibernate5.HibernateTemplate;
@@ -38,6 +40,15 @@ public class ProductDaoImpl implements ProductDao{
 		// TODO Auto-generated method stub
 		hibernateTemplate.delete(product);
 		System.out.println("deleted successfully");
+	}
+
+	@Override
+	public List<Product> find() {
+		// TODO Auto-generated method stub
+		
+
+		List<Product> product =	hibernateTemplate.loadAll(Product.class);
+		return product;
 	}
 
 }

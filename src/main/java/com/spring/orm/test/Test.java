@@ -18,17 +18,22 @@ public class Test {
 		
 		ProductDao productDao =(ProductDao) context.getBean("productDao");
 		
-		Product product = new Product();
-		
-		product.setId(2);
-//		product.setName("windows");
-//		product.setDescription("OS");
+//		Product product = new Product();
+//		
+//		product.setId(5);
+//		product.setName("dove");
+//		product.setDescription("soap");
 //		product.setPrice(123.40);
-		
-		//productDao.create(product);
+//		
+//		productDao.create(product);
 		//productDao.update(product);
 		
-		productDao.delete(product);
+		//productDao.delete(product);
+	List<Product> product=	productDao.find();
+	
+	for(Product p:product){
+		System.out.println(p);
+	}
 }  
 		
 	}
