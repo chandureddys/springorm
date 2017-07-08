@@ -32,4 +32,12 @@ public class ProductDaoImpl implements ProductDao{
 		System.out.println("updated successfully");
 	}
 
+	@Override
+	@Transactional
+	public void delete(Product product) {
+		// TODO Auto-generated method stub
+		hibernateTemplate.delete(product);
+		System.out.println("deleted successfully");
+	}
+
 }

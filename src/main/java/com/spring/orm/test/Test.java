@@ -20,14 +20,15 @@ public class Test {
 		
 		Product product = new Product();
 		
-		product.setId(1);
-		product.setName("Apple");
-		product.setDescription("apple phone");
-		product.setPrice(123.40);
+		product.setId(2);
+//		product.setName("windows");
+//		product.setDescription("OS");
+//		product.setPrice(123.40);
 		
-		productDao.create(product);
+		//productDao.create(product);
+		//productDao.update(product);
 		
-		
+		productDao.delete(product);
 }  
 		
 	}
